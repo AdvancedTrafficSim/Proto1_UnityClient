@@ -9,3 +9,5 @@ Needs some more work before we can really start getting an idea of performance f
 making for 17250 "simulated" and moving entities total.
 
 Again, very trivial and rough first sketch, there's many more optimizations to the base system that can and need to be done (some staggering of when the sim ticks occur to the groups and even members in groups themselves), but I want to try and push it to git now, just to get into the habit of it.
+
+With all logging and nonsense turned off, it seems the update logic itself takes up 0.4ms with periodical spikes to 12 or 50 ms

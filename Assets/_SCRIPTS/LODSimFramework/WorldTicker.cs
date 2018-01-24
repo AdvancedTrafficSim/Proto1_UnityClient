@@ -46,10 +46,10 @@ public class WorldTicker : TickedObject {
 		//each group that should be ticked (determined just by modulo right now) is ticked
 		for (int c1 = 0; c1 < groups.Count; c1++)
 		{
-			Debug.Log("SHOULDTICK?: group: " + c1 + "; tickInterval: " + groups[c1].TickInterval + "; ti%ts: " + Mathf.Round((groups[c1].TickInterval % timeStep) * 1000));
+			//Debug.Log("SHOULDTICK?: group: " + c1 + "; tickInterval: " + groups[c1].TickInterval + "; ti%ts: " + Mathf.Round((groups[c1].TickInterval % timeStep) * 1000));
 			if (groups[c1].TickInterval == 0 || Mathf.Round((groups[c1].TickInterval % timeStep) * 1000) == 0) //compare with millisecond precision
 			{
-				Debug.Log("DOTICK: group: " + c1 + "; tickInterval: " + groups[c1].TickInterval + "; ti%ts: " + groups[c1].TickInterval % timeStep);
+				//Debug.Log("DOTICK: group: " + c1 + "; tickInterval: " + groups[c1].TickInterval + "; ti%ts: " + groups[c1].TickInterval % timeStep);
 				for (int c2 = 0; c2 < groups[c1].Members.Count; c2++) groups[c1].Members[c2].Tick(endTime, groups[c1].TickTimeStep);
 			}
 		}
